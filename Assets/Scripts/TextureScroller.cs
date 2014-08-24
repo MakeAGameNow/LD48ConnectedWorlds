@@ -21,4 +21,12 @@ public class TextureScroller : MonoBehaviour
 			materialInfo.material.SetTextureOffset(materialInfo.textureName,oldPosition + materialInfo.scrollSpeed*Time.deltaTime);
 		}
 	}
+
+	void OnApplicationQuit()
+	{
+		foreach(MaterialScrollInfo materialInfo in materialInfos)
+		{
+			materialInfo.material.SetTextureOffset(materialInfo.textureName,Vector2.zero);
+		}
+	}
 }
