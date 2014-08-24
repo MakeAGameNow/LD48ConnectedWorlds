@@ -6,6 +6,7 @@ public class SpherePopulator : MonoBehaviour
 	public GameObject[] gameObjects;
 	public float number = 100;
 	public float radius = 150;
+	public LayerMask layerMask = -1;
 
 	// Use this for initialization
 	void Start ()
@@ -16,10 +17,10 @@ public class SpherePopulator : MonoBehaviour
 
 			RaycastHit hit;
 			Vector3 newUp = transform.position-obj.transform.position;
-			if(Physics.Raycast(obj.transform.position,newUp,out hit))
+			if(Physics.Raycast(obj.transform.position,newUp,out hit, Mathf.Infinity, layerMask))
 			{
-				obj.transform.position = hit.point;
-				obj.transform.rotation = Quaternion.LookRotation(Vector3.Cross(transform.right,newUp),newUp);
+				obj.transform.position = hit.point-newUp.normalized;
+				obj.transform.rotation = Quaternion.LookRotation(Vector3.Cross(obj.transform.right,newUp),newUp);
 			}
 		}
 	}

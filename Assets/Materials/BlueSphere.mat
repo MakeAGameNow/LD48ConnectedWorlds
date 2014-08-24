@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: RedSphere
+  m_Name: BlueSphere
   m_Shader: {fileID: 4800000, guid: a1e99e48b347f4be7807bc1d6934f79f, type: 3}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
@@ -19,7 +19,7 @@ Material:
         second:
           m_Texture: {fileID: 2800000, guid: 960248b092ebd423e9d3f528f2b4ef1a, type: 3}
           m_Scale: {x: 100, y: 100}
-          m_Offset: {x: -202.597351, y: -169.636414}
+          m_Offset: {x: -392.74292, y: -359.782349}
       data:
         first:
           name: _Cube
@@ -55,4 +55,4 @@ Material:
       data:
         first:
           name: _ReflectColor
-        second: {r: 1, g: 0, b: 0, a: .501960814}
+        second: {r: 0, g: 1, b: 1, a: .501960814}
