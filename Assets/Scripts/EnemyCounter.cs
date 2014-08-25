@@ -10,10 +10,24 @@ public class EnemyCounter : MonoBehaviour
 	void Update()
 	{
 		enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
+		if(enemyCount <= 0)
+		{
+			if(Input.anyKeyDown)
+			{
+				Application.LoadLevel(Application.loadedLevel);
+			}
+		}
 	}
 	
 	void OnGUI()
 	{
-		GUILayout.Label(enemyCount.ToString());
+		if(enemyCount > 0)
+		{
+			GUILayout.Label("Terminate remaining GlitchCubes: " + enemyCount.ToString());
+		}
+		else
+		{
+			GUILayout.Label("Server clear of GlitchCubes, press any key to connect to next server!");
+		}
 	}
 }
