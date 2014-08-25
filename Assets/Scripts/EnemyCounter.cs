@@ -15,7 +15,7 @@ public class EnemyCounter : MonoBehaviour
 	{
 		foreach(Material mat in randomizeColorsOnThese)
 		{
-			originalColors.Add(mat.color);
+			originalColors.Add(mat.GetColor ("_ReflectColor"));
 		}
 		DontDestroyOnLoad(gameObject);
 	}
@@ -31,7 +31,7 @@ public class EnemyCounter : MonoBehaviour
 				Application.LoadLevel(Application.loadedLevel);
 				foreach(Material mat in randomizeColorsOnThese)
 				{
-					mat.color = new HSBColor(Random.value,1.0f,1.0f).ToColor();
+					mat.SetColor("_ReflectColor",new HSBColor(Random.value,1.0f,1.0f).ToColor());
 				}
 			}
 		}
@@ -54,7 +54,7 @@ public class EnemyCounter : MonoBehaviour
 		int i = 0;
 		foreach(Material mat in randomizeColorsOnThese)
 		{
-			mat.color = originalColors[i];
+			mat.SetColor("_ReflectColor",originalColors[i]);
 			i++;
 		}
 	}
