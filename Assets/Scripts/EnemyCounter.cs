@@ -1,10 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class EnemyCounter : MonoBehaviour
 {
 	[HideInInspector]
 	public int enemyCount;
+
+	public Material[] randomizeColorsOnThese;
+
+	public List<Color> originalColors = new List<Color>();
+
+	void Start()
+	{
+		foreach(Material mat in randomizeColorsOnThese)
+		{
+			originalColors.Add(mat.color);
+		}
+		DontDestroyOnLoad(gameObject);
+	}
 
 	// Update is called once per frame
 	void Update()
@@ -15,6 +29,10 @@ public class EnemyCounter : MonoBehaviour
 			if(Input.anyKeyDown)
 			{
 				Application.LoadLevel(Application.loadedLevel);
+				foreach(Material mat in randomizeColorsOnThese)
+				{
+					mat.color = new HSBColor(Random.value,1.0f,1.0f).ToColor();
+				}
 			}
 		}
 	}
@@ -28,6 +46,16 @@ public class EnemyCounter : MonoBehaviour
 		else
 		{
 			GUILayout.Label("Server clear of GlitchCubes, press any key to connect to next server!");
+		}
+	}
+
+	void OnApplicationQuit()
+	{
+		int i = 0;
+		foreach(Material mat in randomizeColorsOnThese)
+		{
+			mat.color = originalColors[i];
+			i++;
 		}
 	}
 }

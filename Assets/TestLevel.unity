@@ -89,7 +89,6 @@ GameObject:
   - 114: {fileID: 947984685}
   - 114: {fileID: 947984686}
   - 82: {fileID: 947984687}
-  - 114: {fileID: 947984688}
   m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -280,18 +279,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!114 &947984688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 947984679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f70c97b36a01546c6889760ae42ec274, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyCount: 0
 --- !u!1 &1096830919
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,6 +477,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 100000, guid: eaf008139507b4dfb876442a8d7ad8de, type: 2}
+--- !u!1 &1673158371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1673158373}
+  - 114: {fileID: 1673158372}
+  m_Layer: 0
+  m_Name: EnemyCounter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1673158372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1673158371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f70c97b36a01546c6889760ae42ec274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyCount: 0
+  randomizeColorsOnThese:
+  - {fileID: 2100000, guid: df2e5fcbdc00e4526bdff531da1b5055, type: 2}
+  - {fileID: 2100000, guid: 72a0972b0386c45f188284420d267db4, type: 2}
+  - {fileID: 2100000, guid: 21cbfdde7a948403db99a390aa973af9, type: 2}
+--- !u!4 &1673158373
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1673158371}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
 --- !u!1 &1676363865
 GameObject:
   m_ObjectHideFlags: 0
