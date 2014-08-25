@@ -22,6 +22,9 @@ public class DestroyParticleSystemAfterTime : MonoBehaviour
 	void DestroyParticle()
 	{
 		particleSystem.Stop();
-		collider.enabled = false;
+		if(collider != null)
+		{
+			collider.enabled = false;
+		}
 	}
 }
