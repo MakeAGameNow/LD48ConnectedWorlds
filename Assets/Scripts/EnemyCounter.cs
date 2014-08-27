@@ -11,8 +11,18 @@ public class EnemyCounter : MonoBehaviour
 
 	public List<Color> originalColors = new List<Color>();
 
+	public static EnemyCounter Instance = null;
+
 	void Start()
 	{
+		if(Instance == null)
+		{
+			Instance = this;
+		}
+		else
+		{
+			Destroy(gameObject);
+		}
 		foreach(Material mat in randomizeColorsOnThese)
 		{
 			originalColors.Add(mat.GetColor ("_ReflectColor"));
