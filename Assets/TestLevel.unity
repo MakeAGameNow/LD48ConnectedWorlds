@@ -477,6 +477,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 100000, guid: eaf008139507b4dfb876442a8d7ad8de, type: 2}
+  shootSpeed: 0
+  shootNow: 0
+  canShoot: 1
 --- !u!1 &1673158371
 GameObject:
   m_ObjectHideFlags: 0
