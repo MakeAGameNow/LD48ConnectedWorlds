@@ -167,7 +167,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 947984679}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 68ec2fe99d1108b9d0006a298d76c639, type: 3}
   m_Name: 
@@ -330,7 +330,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1096830919}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93ff0384cae794650aef5c7324eb1808, type: 3}
   m_Name: 
@@ -545,6 +545,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 72a0972b0386c45f188284420d267db4, type: 2}
   - {fileID: 2100000, guid: 21cbfdde7a948403db99a390aa973af9, type: 2}
   originalColors: []
+  autoLevel: 1
 --- !u!4 &1673158373
 Transform:
   m_ObjectHideFlags: 0

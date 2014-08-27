@@ -11,6 +11,8 @@ public class EnemyCounter : MonoBehaviour
 
 	public List<Color> originalColors = new List<Color>();
 
+	public bool autoLevel = false;
+
 	public static EnemyCounter Instance = null;
 
 	void Start()
@@ -36,7 +38,7 @@ public class EnemyCounter : MonoBehaviour
 		enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
 		if(enemyCount <= 0)
 		{
-			if(Input.anyKeyDown)
+			if(Input.anyKeyDown || autoLevel)
 			{
 				Application.LoadLevel(Application.loadedLevel);
 				foreach(Material mat in randomizeColorsOnThese)
